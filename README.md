@@ -1,39 +1,80 @@
-# iphone-phone-app
+<div align="center">
+ <img src="https://github.com/IryDev/apple-iphone/assets/86270481/6e9fe0ba-2b16-41a9-b2c1-cdf7125d1b7e.png" alt="Project Banner" />
 
-This template should help get you started developing with Vue 3 in Vite.
+  <div>
+    <img src="https://img.shields.io/badge/Vue%20js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D" alt="vue.js" />
+    <img src="https://img.shields.io/badge/-Three_JS-black?style=for-the-badge&logoColor=white&logo=threedotjs&color=000000" alt="three.js" />
+    <img src="https://img.shields.io/badge/-GSAP-black?style=for-the-badge&logoColor=white&logo=greensock&color=88CE02" alt="greensock" />
+    <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="tailwindcss" />
+  </div>
 
-## Recommended IDE Setup
+  <h3 align="center">Iphone 15 Pro Website</h3>
+</div>
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## 📋 <a name="table">Table of Contents</a>
 
-## Type Support for `.vue` Imports in TS
+1. 💻📱 [Introduction](#introduction)
+2. ⚙️ [Tech Stack](#tech-stack)
+3. ✨ [Features](#features)
+4. ⚡ [Quick Start](#quick-start)
+5. 🔗 [Contact](#more)
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+## <a name="introduction">💻📱 Introduction</a>
 
-## Customize configuration
+This is a clone of Apple's iPhone 15 Pro website using React.js and TailwindCSS. It highlights the effective use of GSAP (Greensock Animations) and Three.js for displaying iPhone 15 Pro models in various colors and shapes.
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+If you're getting started and need assistance or face any bugs, join our active Discord community with over 27k+ members. It's a place where people help each other out.
 
-## Project Setup
+## <a name="tech-stack">⚙️ Tech Stack</a>
 
-```sh
-pnpm install
+- Vue.js
+- Three.js
+- Trois.js
+- GSAP (Greensock)
+- Vite
+- Tailwind CSS
+
+## <a name="tech-stack">⚙️ Tech Stack</a>
+
+👉 **Beautiful Subtle Smooth Animations using GSAP**: Enhanced user experience with seamless and captivating animations powered by GSAP.
+
+👉 **Nice Model Switching Color using the efficiency of VueJS**: A usefull switcher of color for a dynamic and interactive experience
+
+👉 **Coming : 3D Model Rendering with Different Colors and Sizes**: Explore the iPhone 15 Pro from every angle with dynamic 3D rendering, offering various color and size options.
+
+👉 **Coming : Custom Video Carousel (made with GSAP)**: Engage users with a unique and interactive video carousel developed using GSAP for a personalized browsing experience.
+
+👉 **Completely Responsive**: Consistent access and optimal viewing on any device with a fully responsive design that adapts to different screen sizes.
+
+and many more, including code architecture and reusability
+
+## <a name="quick-start">🤸 Quick Start</a>
+
+Follow these steps to set up the project locally on your machine.
+
+**Prerequisites**
+
+Be sure you have the following installed on your machine:
+
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/en)
+- [pnpm](https://www.pnpm.com/) (Performant Node Package Manager)
+
+```bash
+git clone https://github.com/IryDev/apple-iphone.git
+cd apple-iphone
 ```
 
-### Compile and Hot-Reload for Development
+code from Terminal and run.
 
-```sh
-pnpm dev
-```
+## <a name="contact">Connect with Me</a>
 
-### Type-Check, Compile and Minify for Production
+If you have any questions or want to connect, feel free to reach out to me through the following channels:
 
-```sh
-pnpm build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-pnpm lint
-```
+<div align="center">
+<div>
+<img src="https://img.shields.io/badge/Portfolio-255E63?style=for-the-badge&logo=About.me&logoColor=white" />
+<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+<img src="https://img.shields.io/badge/Microsoft_Outlook-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white" />
+</div>
+</div>
