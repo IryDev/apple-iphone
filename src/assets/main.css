@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('../assets/fonts/SFPRODISPLAYREGULAR.OTF') format('opentype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('../assets/fonts/SFPRODISPLAYBOLD.OTF') format('opentype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('../assets/fonts/SFPRODISPLAYLIGHT.OTF') format('opentype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('../assets/fonts/SFPRODISPLAYSEMIBOLDITALIC.OTF') format('opentype');
+  font-weight: 600;
+}
+
+body {
+  color: white;
+  width: 100vw;
+  overflow-x: hidden;
+  height: 100%;
+  background: #000;
+}
+
+main {
+  overflow: hidden;
+}
+
+.router-link-active {
+  color: #2170d6;
+}
+
+@layer utilities {
+  .section-heading {
+    @apply mb-5 text-3xl font-medium text-gray md:text-5xl lg:mb-0 lg:text-6xl;
+  }
+
+  .common-padding {
+    @apply px-5 py-20 sm:px-10 sm:py-32;
+  }
+
+  .video-carousel_container {
+    @apply relative h-[35vh] w-[88vw] sm:h-[50vh] sm:w-[70vw] md:h-[75vh];
+  }
+}
