@@ -44,7 +44,7 @@ If you're getting started and need assistance or face any bugs, join our active 
 
 👉 **Coming : Custom Video Carousel (made with GSAP)**: Engage users with a unique and interactive video carousel developed using GSAP for a personalized browsing experience.
 
-👉 **Coming : IOS Phone Application**: A simulation of the IOS Phone App directly in the web browser
+👉 **Coming : iOS Phone Call Application**: A simulation of the IOS Phone App directly in the web browser
 
 👉 **Completely Responsive**: Consistent access and optimal viewing on any device with a fully responsive design that adapts to different screen sizes.
 
