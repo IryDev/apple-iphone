@@ -86,8 +86,7 @@ pnpm dev
 
 If you have any questions or want to connect, feel free to reach out to me through the following channels:
 
-<div align="center">
-
+<div align="center">  
 <div>
 <a href="https://rey-kosso-portfolio.vercel.app">
 <img src="https://img.shields.io/badge/Portfolio-255E63?style=for-the-badge&logo=About.me&logoColor=white" />

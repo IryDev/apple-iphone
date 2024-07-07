@@ -1,39 +1,49 @@
 <template>
-  <div class="mt-10 flex w-full flex-col items-center justify-center md:mt-20">
-    <div class="relative h-24 lg:h-32">
+  <div class="mt-10 flex w-full flex-col items-center justify-center">
+    <div class="relative h-24">
       <input
         v-model="input"
-        class="h-16 w-full p-4 text-center text-3xl text-black outline-none"
+        class="h-16 w-full p-4 text-center text-2xl text-black outline-none"
         type="text"
       />
-      <a
-        v-if="input"
-        href=""
-        class="absolute bottom-0 left-1/2 -translate-x-1/2 text-lg text-blue md:bottom-8"
-        >Add Number</a
+
+      <button
+        @click="createContactModal = false"
+        v-if="contactName === '' && input !== ''"
+        class="absolute bottom-0 left-1/2 w-full -translate-x-1/2 text-lg text-blue"
       >
+        Add Number
+      </button>
+
+      <p
+        v-else-if="contactName !== ''"
+        class="absolute bottom-0 left-1/2 w-full -translate-x-1/2 text-center text-lg uppercase text-black"
+      >
+        {{ contactName }}
+      </p>
     </div>
 
-    <div class="mx-auto my-4 inline-grid grid-cols-3 gap-3 lg:gap-6">
+    <div class="mx-auto my-4 inline-grid grid-cols-3 gap-4">
       <button
         v-for="touch in touches"
         @click="input += touch.touch"
         :key="touch.touch"
-        class="flex size-[60px] flex-col items-center justify-center rounded-full bg-[#e5e5e5] text-black lg:size-[70px]"
+        class="flex size-[60px] flex-col items-center justify-center rounded-full bg-[#e5e5e5] text-black transition-colors duration-300 hover:bg-[#d9d9d9] active:bg-[#a8a8a8]"
       >
         <span class="text-3xl">{{ touch.touch }}</span>
-        <span class="text-[8px] font-bold tracking-widest">{{ touch.description }}</span>
+        <span class="text-[6px] font-bold tracking-widest">{{ touch.description }}</span>
       </button>
       <div></div>
       <a
+        @click="addLog(input)"
         :href="'tel:' + input"
-        class="flex size-[60px] items-center justify-center rounded-full bg-[#35c759] lg:size-[70px]"
+        class="flex size-[60px] items-center justify-center rounded-full bg-[#35c759] transition-colors hover:bg-[#2ea84b] active:bg-[#1e6f2c]"
       >
-        <img class="size-8" src="../assets/icons/ios-call.svg" alt="" />
+        <img class="size-7" src="../assets/icons/ios-call.svg" alt="" />
       </a>
       <button
         @click="input = input.slice(0, -1)"
-        class="flex size-[70px] items-center justify-center"
+        class="flex size-[60px] items-center justify-center"
       >
         <img width="30" src="../assets/icons/icons8-clear-symbol-50.png" alt="" />
       </button>
@@ -42,9 +52,34 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { useContactsStore } from '@/stores/contacts'
+import { useLogsStore } from '@/stores/logs'
+import { ref, watch } from 'vue'
+
+const contactsStore = useContactsStore()
+const logsStore = useLogsStore()
 
 const input = ref('')
+const contactName = ref('')
+const createContactModal = ref(true)
+
+const addLog = (number: string) => {
+  logsStore.addLog({
+    id: Math.random(),
+    name: number,
+    date: new Date().toLocaleString(),
+    place: 'Mobile'
+  })
+}
+
+watch(
+  () => input.value,
+  () => {
+    // Check if the input value matches a known contact
+    const contact = contactsStore.getContactByNumber(input.value)
+    contactName.value = contact ? contact.name : ''
+  }
+)
 
 const touches = [
   {

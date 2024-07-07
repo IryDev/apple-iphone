@@ -1,17 +1,19 @@
 <template>
-  <header class="flex h-[calc(100vh-60px)] w-full flex-col items-center justify-center">
-    <h1 class="text-3xl font-medium text-gray-200">iPhone 15 Pro</h1>
-    <div class="w-8/12 md:w-10/12">
-      <video v-if="windowWidth > 768" muted autoplay id="video">
-        <source :src="hero" type="video/mp4" />
-      </video>
-      <video v-else muted autoplay id="video">
-        <source :src="smallHero" type="video/mp4" />
-      </video>
-    </div>
-    <UiButton id="buy" class="mb-8">Buy</UiButton>
-    <p id="price" class="text-xl font-medium text-white">From $999 or $41.62/mo. for 24 mo.</p>
-  </header>
+  <section class="w-full">
+    <header class="flex h-[calc(100vh-60px)] w-full flex-col items-center justify-center">
+      <h1 class="text-3xl font-medium text-gray-200">iPhone 15 Pro</h1>
+      <div class="w-8/12 md:w-10/12">
+        <video v-if="windowWidth > 768" muted autoplay id="video">
+          <source :src="hero" type="video/mp4" />
+        </video>
+        <video v-else muted autoplay id="video">
+          <source :src="smallHero" type="video/mp4" />
+        </video>
+      </div>
+      <UiButton id="buy" class="mb-8">Buy</UiButton>
+      <p id="price" class="text-xl font-medium text-white">From $999 or $41.62/mo. for 24 mo.</p>
+    </header>
+  </section>
 </template>
 
 <script setup lang="ts">

@@ -6,6 +6,7 @@ import FullStory from './FullStory.vue'
 import HeaderComponent from './HeaderComponent.vue'
 import HighlightsComponent from './HighlightsComponent.vue'
 import NavBar from './NavBar.vue'
+import PresPhoneApp from './PresPhoneApp.vue'
 </script>
 
 <template>
@@ -15,5 +16,6 @@ import NavBar from './NavBar.vue'
   <CloserLook />
   <FullStory />
   <BenchMark />
+  <PresPhoneApp />
   <Footer />
 </template>

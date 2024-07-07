@@ -133,47 +133,4 @@ const handleProcess = (type: string, index?: number) => {
       break
   }
 }
-
-watchEffect(() => {
-  let currentProgress = 0
-  let span = videoSpanRef.value
-  if (span[videoId]) {
-    // animate the progress bar of the current video
-    let anim = gsap.to(span[videoId], {
-      duration: 10,
-      width: '100%',
-      ease: 'none',
-      onUpdate: () => {
-        const progress = Math.ceil(anim.progress() * 100)
-
-        if (progress !== currentProgress) {
-          currentProgress = progress
-
-          gsap.to(videoDivRef[videoId], {
-            width: window.innerWidth < 760 ? '10vw' : window.innerWidth < 1200 ? '10vw' : '4vw'
-          })
-        }
-      },
-      onComplete: () => {
-        // if the video is the last one, set the isEnd to true
-        if (videoId === hightlightsSlides.length - 1) {
-          video.isEnd = true
-        }
-      }
-    })
-  }
-})
-
-onMounted(() => {
-  // set the loadedData to the videoRef
-  gsap.to('#video', {
-    scrollTrigger: {
-      trigger: '#video',
-      toggleActions: 'restart none none none'
-    },
-    onComplete: () => {
-      setVideo((prevVideo) => ({ ...prevVideo, startPlay: true, isPlaying: true }))
-    }
-  })
-})
 </script>

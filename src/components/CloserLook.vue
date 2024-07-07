@@ -1,6 +1,6 @@
 <template>
   <section class="common-padding h-full">
-    <div class="max-w-[100vw]">
+    <div class="scrim-max-width">
       <div class="mb-12 w-full lg:mb-24">
         <h2 id="closer" class="section-heading font-bold">Take a closer look.</h2>
       </div>

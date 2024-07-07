@@ -9,5 +9,19 @@ import play from '../assets/icons/play.svg'
 import replay from '../assets/icons/replay.svg'
 import search from '../assets/icons/search.svg'
 import watch from '../assets/icons/watch.svg'
+import chevronDown from '../assets/icons/chevron-down.svg'
 
-export { apple, bag, iosBattery, iosCall, iosSignal, iosWifi, pause, play, replay, search, watch }
+export {
+  apple,
+  bag,
+  iosBattery,
+  iosCall,
+  iosSignal,
+  iosWifi,
+  pause,
+  play,
+  replay,
+  search,
+  watch,
+  chevronDown
+}

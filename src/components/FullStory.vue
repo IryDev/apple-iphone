@@ -1,6 +1,6 @@
 <template>
   <section class="common-padding h-full bg-zinc">
-    <div class="max-w-[100vw]">
+    <div class="scrim-max-width">
       <div class="mb-12 w-full lg:mb-24">
         <h2 id="explore" class="section-heading font-bold">Explore the full story.</h2>
       </div>
@@ -47,7 +47,6 @@
 </template>
 
 <script setup lang="ts">
-// on scroll play video
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
 import { onMounted } from 'vue'
