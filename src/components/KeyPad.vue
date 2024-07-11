@@ -8,7 +8,7 @@
       />
 
       <button
-        @click="createContactModal = false"
+        @click="createContactModal = true"
         v-if="contactName === '' && input !== ''"
         class="absolute bottom-0 left-1/2 w-full -translate-x-1/2 text-lg text-blue"
       >
@@ -35,19 +35,25 @@
       </button>
       <div></div>
       <a
+        :disabled="input.length == 0"
         @click="addLog(input)"
         :href="'tel:' + input"
         class="flex size-[60px] items-center justify-center rounded-full bg-[#35c759] transition-colors hover:bg-[#2ea84b] active:bg-[#1e6f2c]"
       >
         <img class="size-7" src="../assets/icons/ios-call.svg" alt="" />
       </a>
-      <button
-        @click="input = input.slice(0, -1)"
-        class="flex size-[60px] items-center justify-center"
-      >
-        <img width="30" src="../assets/icons/icons8-clear-symbol-50.png" alt="" />
-      </button>
+      <div v-if="input.length > 0" class="flex size-[60px] items-center justify-center">
+        <button @click="input = input.slice(0, -1)" class="">
+          <img width="30" src="../assets/icons/icons8-clear-symbol-50.png" alt="" />
+        </button>
+      </div>
     </div>
+
+    <CreateContactModal
+      @close="toggleCreateContactModal(false)"
+      :phone="input"
+      :createContactModal="createContactModal"
+    />
   </div>
 </template>
 
@@ -55,18 +61,23 @@
 import { useContactsStore } from '@/stores/contacts'
 import { useLogsStore } from '@/stores/logs'
 import { ref, watch } from 'vue'
+import CreateContactModal from './modal/CreateContactModal.vue'
 
 const contactsStore = useContactsStore()
 const logsStore = useLogsStore()
 
 const input = ref('')
 const contactName = ref('')
-const createContactModal = ref(true)
+const createContactModal = ref(false)
+
+const toggleCreateContactModal = (show: boolean) => {
+  createContactModal.value = show
+}
 
 const addLog = (number: string) => {
   logsStore.addLog({
     id: Math.random(),
-    name: number,
+    name: contactName.value || number,
     date: new Date().toLocaleString(),
     place: 'Mobile'
   })

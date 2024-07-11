@@ -21,15 +21,13 @@
 
 ## <a name="introduction">💻📱 Introduction</a>
 
-This is a clone of Apple's iPhone 15 Pro website using React.js and TailwindCSS. It highlights the effective use of GSAP (Greensock Animations) and Three.js for displaying iPhone 15 Pro models in various colors and shapes.
-
-If you're getting started and need assistance or face any bugs, join our active Discord community with over 27k+ members. It's a place where people help each other out.
+This is a clone of Apple's iPhone 15 Pro website using Vue.js and TailwindCSS. It highlights the effective use of GSAP (Greensock Animations) and Three.js for displaying iPhone 15 Pro models in various colors and shapes.
 
 ## <a name="tech-stack">⚙️ Tech Stack</a>
 
 - Vue.js
 - Three.js
-- Trois.js
+- Tres.js
 - GSAP (Greensock)
 - Vite
 - Tailwind CSS
@@ -40,15 +38,13 @@ If you're getting started and need assistance or face any bugs, join our active 
 
 👉 **Nice Model Switching Color in Mobile Devices**: A usefull switcher of color for a dynamic and interactive experience even in mobile devices
 
-👉 **Coming : 3D Model Rendering with Different Colors and Sizes**: Explore the iPhone 15 Pro from every angle with dynamic 3D rendering, offering various color and size options.
-
-👉 **Coming : Custom Video Carousel (made with GSAP)**: Engage users with a unique and interactive video carousel developed using GSAP for a personalized browsing experience.
-
-👉 **Coming : iOS Phone Call Application**: A simulation of the IOS Phone App directly in the web browser
+👉 **iOS Phone Call Application**: A simulation of the IOS Phone App directly in the web browser
 
 👉 **Completely Responsive**: Consistent access and optimal viewing on any device with a fully responsive design that adapts to different screen sizes.
 
-and many more, including code architecture and reusability
+👉 **Coming : 3D Model Rendering with Different Colors and Sizes**: Explore the iPhone 15 Pro from every angle with dynamic 3D rendering, offering various color and size options.
+
+👉 **Coming : Custom Video Carousel (made with GSAP)**: Engage users with a unique and interactive video carousel developed using GSAP for a personalized browsing experience.
 
 ## <a name="quick-start">⚡ Quick Start</a>
 

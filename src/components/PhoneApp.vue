@@ -17,9 +17,9 @@
         </div>
 
         <div class="status flex items-center gap-2 pr-2">
-          <img width="10" height="10" src="../assets/icons/ios-signal.png" alt="" />
+          <img width="15" height="15" src="../assets/icons/ios-signal.png" alt="" />
           <img width="15" height="15" src="../assets/icons/ios-wifi.png" alt="" />
-          <img width="20" height="22" src="../assets/icons/ios-battery-full.svg" alt="" />
+          <img width="25" height="25" src="../assets/icons/ios-battery.png" alt="" />
         </div>
       </div>
 

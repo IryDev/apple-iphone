@@ -123,6 +123,10 @@ onMounted(() => {
   transform: rotateX(180deg);
 }
 
+.nav-on-scroll {
+  transition: transform 1s;
+}
+
 .height-transition {
   transition-duration: 0.5s;
 }

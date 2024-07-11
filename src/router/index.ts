@@ -4,10 +4,10 @@ import Favorites from '@/views/FavoritesView.vue'
 import Recents from '@/views/RecentsView.vue'
 import Voicemail from '@/views/VoicemailView.vue'
 
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',

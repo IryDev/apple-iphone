@@ -1,6 +1,6 @@
 <template>
   <div
-    class="fixed bottom-1 left-1/2 flex w-[calc(100%-10px)] -translate-x-1/2 justify-between gap-1 rounded-b-3xl border-t-[1px] border-[#c8c8c8] bg-[#fcfcfc] px-2 pb-8 pt-1"
+    class="fixed bottom-1 left-1/2 flex w-[calc(100%-10px)] -translate-x-1/2 justify-between gap-1 rounded-b-3xl px-2 pb-8 pt-1"
   >
     <RouterLink to="/favorites" class="flex flex-col items-center text-[#A3A3A3]">
       <svg

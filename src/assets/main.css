@@ -52,7 +52,7 @@ main {
   margin-inline-start: auto;
   margin-inline-end: auto;
   position: relative;
-  max-width: 1440px;
+  max-width: 1140px;
 }
 
 @layer utilities {
