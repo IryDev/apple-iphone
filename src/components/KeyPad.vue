@@ -61,6 +61,7 @@
 import { useContactsStore } from '@/stores/contacts'
 import { useLogsStore } from '@/stores/logs'
 import { ref, watch } from 'vue'
+import dayjs from 'dayjs'
 import CreateContactModal from './modal/CreateContactModal.vue'
 
 const contactsStore = useContactsStore()
@@ -78,7 +79,7 @@ const addLog = (number: string) => {
   logsStore.addLog({
     id: Math.random(),
     name: contactName.value || number,
-    date: new Date().toLocaleString(),
+    date: dayjs().format('MM/DD/YY HH:mm:ss'),
     place: 'Mobile'
   })
 }

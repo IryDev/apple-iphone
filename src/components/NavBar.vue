@@ -34,26 +34,33 @@
       </div>
     </nav>
 
-    <div class="navMobileScrollBg absolute top-0 h-screen w-full">
+    <div class="navMobileScrollBg fixed left-0 top-0 z-[1000] w-full">
       <div
-        :class="navMobileScroll ? 'h-56' : 'h-12'"
-        class="nav-on-scroll height-transition fixed left-0 top-0 z-[1000] flex h-12 w-full -translate-y-[300px] flex-col items-center border-b border-white/30 bg-black/50 p-4 py-6 pt-2 backdrop-blur-lg lg:!h-12 lg:!items-center"
+        :class="navMobileScroll ? 'h-48' : 'h-12'"
+        class="height-transition nav-on-scroll fixed left-0 top-0 z-[1000] flex h-12 w-full -translate-y-[192px] flex-col items-center border-b border-white/30 bg-black/50 p-4 py-6 pt-2 backdrop-blur-lg lg:!h-12 lg:!items-center"
       >
         <div class="flex w-full items-center justify-between lg:max-w-[1024px]">
-          <p class="text-2xl font-medium text-white">iPhone 15 Pro</p>
+          <p class="text-lg font-medium text-white">iPhone 15 Pro</p>
           <div class="flex items-center justify-center gap-4">
-            <ul class="hidden gap-4 lg:flex">
-              <li class="text-xs text-gray-100">Overview</li>
-              <li class="cursor-pointer text-xs hover:text-blueHover">
+            <ul class="relative hidden gap-4 md:flex">
+              <li
+                class="relative text-xs text-white after:absolute after:-bottom-[18px] after:left-0 after:h-[1px] after:w-full after:bg-white"
+              >
+                Overview
+              </li>
+
+              <li class="cursor-pointer text-xs text-gray-100 hover:text-white">
                 Switch from android to iphone
               </li>
-              <li class="cursor-pointer text-xs hover:text-blueHover">Tech Specs</li>
+
+              <li class="cursor-pointer text-xs text-gray-100 hover:text-white">Tech Specs</li>
             </ul>
+
             <div class="flex items-center justify-center gap-4">
-              <button class="cursor-pointer" @click="navMobileScroll = !navMobileScroll">
+              <button class="cursor-pointer" @click="toggleNavMobileScroll">
                 <img
                   :class="navMobileScroll ? 'rotateX-180' : ''"
-                  class="transition-transform duration-300 lg:hidden"
+                  class="transition-transform duration-300 md:hidden"
                   :src="chevronDown"
                   alt="Chevron Down"
                   width="15"
@@ -69,13 +76,20 @@
             </div>
           </div>
         </div>
+
         <ul
-          :class="navMobileScroll ? 'opacity-1' : 'pointer-events-none opacity-0'"
+          :class="navMobileScroll ? 'opacity-1 delay-500' : 'pointer-events-none opacity-0'"
           class="mt-6 flex flex-col gap-4 self-baseline pl-8 transition-opacity duration-300 lg:hidden"
         >
-          <li class="text-lg font-light">Overview</li>
-          <li class="cursor-pointer text-lg hover:text-blueHover">Switch from android to iPhone</li>
-          <li class="cursor-pointer text-lg hover:text-blueHover">Tech Specs</li>
+          <li
+            class="relative text-sm font-light after:absolute after:-bottom-0 after:-left-4 after:h-full after:w-[1px] after:bg-white"
+          >
+            Overview
+          </li>
+          <li class="cursor-pointer text-sm text-gray-100 hover:text-white">
+            Switch from android to iPhone
+          </li>
+          <li class="cursor-pointer text-sm text-gray-100 hover:text-white">Tech Specs</li>
         </ul>
       </div>
     </div>
@@ -104,7 +118,12 @@ const navLinks: string[] = [
 
 const navMobileScroll = ref(false)
 
-// put the body in pointer-events none and blur when the mobile nav is open
+// put main tag on filter blur when navMobileScroll is true
+
+function toggleNavMobileScroll() {
+  navMobileScroll.value = !navMobileScroll.value
+  document.querySelector('main')?.classList.toggle('blurFltr')
+}
 
 onMounted(() => {
   const navOnScroll = document.querySelector('.nav-on-scroll') as HTMLElement
@@ -123,11 +142,7 @@ onMounted(() => {
   transform: rotateX(180deg);
 }
 
-.nav-on-scroll {
-  transition: transform 1s;
-}
-
 .height-transition {
-  transition-duration: 0.5s;
+  transition-duration: 0.7s;
 }
 </style>

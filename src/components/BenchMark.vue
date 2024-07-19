@@ -4,7 +4,7 @@
       <div class="flex flex-col items-center justify-center">
         <img
           id="chip"
-          class="py-32"
+          class="lg:size-50 py-32"
           width="200"
           height="200"
           src="../assets/img/chip.jpeg"
@@ -21,7 +21,7 @@
         <div class="relative mb-12 py-12">
           <img class="relative z-10" src="../assets/img/frame.png" alt="" />
           <video
-            class="absolute bottom-0 left-1/2 top-1/2 w-[calc(100%-10px)] -translate-x-1/2 -translate-y-1/2 rounded-[20px] md:rounded-[50px] lg:w-[calc(100%-30px)] lg:rounded-[80px]"
+            class="absolute bottom-0 left-1/2 top-1/2 w-[calc(100%-20px)] -translate-x-1/2 -translate-y-1/2 rounded-[20px] md:rounded-[50px] lg:w-[calc(100%-30px)] lg:rounded-[80px]"
             muted
             loop
             autoplay

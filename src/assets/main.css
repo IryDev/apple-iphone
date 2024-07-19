@@ -48,6 +48,14 @@ main {
   color: #2170d6;
 }
 
+.blurFltr {
+  filter: blur(15px);
+}
+
+main {
+  transition: filter 0.5s;
+}
+
 .screen-max-width {
   margin-inline-start: auto;
   margin-inline-end: auto;
@@ -65,6 +73,6 @@ main {
   }
 
   .video-carousel_container {
-    @apply relative h-[35vh] w-[88vw] sm:h-[50vh] sm:w-[70vw] md:h-[75vh];
+    @apply relative h-[65vh] w-full sm:h-[50vh] sm:w-full md:h-[75vh];
   }
 }

@@ -1,6 +1,6 @@
 <template>
   <footer class="bg-zinc px-10 py-5">
-    <div class="max-w-screen">
+    <div class="screen-max-width">
       <h1 class="my-12 text-5xl font-medium text-gray-200">iPhone</h1>
       <div class="mb-4 flex flex-col gap-24 md:flex-row">
         <div class="flex flex-col gap-2">

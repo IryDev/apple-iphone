@@ -12,7 +12,7 @@
     </div>
     <h1 class="mb-2 text-2xl font-bold text-black">Contacts</h1>
 
-    <div class="search-bar-container flex items-center gap-2 rounded-3xl bg-[#efeef1] px-2 py-1">
+    <div class="search-bar-container flex items-center gap-2 rounded-lg bg-[#efeef1] px-2 py-0.5">
       <svg
         className="cursor-pointer"
         width="15"
@@ -23,20 +23,20 @@
       >
         <path
           d="M11.8063 10.8713L8.50685 7.57204C9.10449 6.78005 9.46342 5.79795 9.46342 4.73146C9.46342 2.12276 7.3414 0 4.73171 0C2.12288 0 0 2.12276 0 4.73146C0 7.34101 2.12288 9.46292 4.73171 9.46292C5.79826 9.46292 6.78041 9.10401 7.57244 8.50639L10.8718 11.8056C11.0006 11.9344 11.1702 12 11.3391 12C11.5079 12 11.6767 11.9352 11.8063 11.8056C12.0646 11.5473 12.0646 11.1296 11.8063 10.8713ZM0.937816 4.73146C0.937816 2.63939 2.64038 0.937767 4.73171 0.937767C6.82389 0.937767 8.5256 2.64024 8.5256 4.73146C8.5256 6.82268 6.82389 8.52515 4.73171 8.52515C2.63953 8.52515 0.937816 6.82353 0.937816 4.73146Z"
-          fill="#333333"
+          fill="#9ca3af"
           fillOpacity="0.8"
         />
       </svg>
       <input
         type="text"
-        class="search-bar w-full border-none bg-transparent text-black outline-none"
+        class="search-bar w-full border-none bg-transparent text-black outline-none placeholder:font-light"
         placeholder="Search"
         v-model="search"
         id="search"
       />
       <svg
         class="svg-icon"
-        style="vertical-align: middle; fill: #222222; overflow: hidden"
+        style="vertical-align: middle; fill: #9ca3af; overflow: hidden"
         width="24"
         height="24"
         viewBox="0 0 1024 1024"
@@ -52,8 +52,6 @@
       </svg>
     </div>
 
-    <div class="separator mb-2 mt-2 border-b border-gray-200"></div>
-
     <div class="alphabet alphabet-line-height absolute right-2.5 top-52">
       <div class="flex flex-col items-center gap-0">
         <p class="-leading-2 font-regulat flex flex-col text-center text-[10px] text-blue">
@@ -64,6 +62,7 @@
       </div>
     </div>
 
+    <div class="separator w-full border-b border-[#eeeeee] p-2" />
     <div class="contact flex items-center gap-4 py-2">
       <div class="avatar flex h-12 w-12 items-center justify-center rounded-full bg-[#979da8]">
         <p class="text-2xl">JD</p>
@@ -73,11 +72,12 @@
         <p class="text-xs text-gray-400">My Card</p>
       </div>
     </div>
+    <div class="separator mb-6 w-full border-b border-[#eeeeee]" />
 
-    <div class="contacts-list max-h-[350px] overflow-scroll">
+    <div class="contacts-list max-h-[320px] overflow-scroll">
       <div v-for="letter in alphabet" :key="letter">
         <div v-if="sortContactsByAlphabet(contacts)[letter].length > 0">
-          <h2 class="text-sm text-gray">{{ letter }}</h2>
+          <h2 class="mt-4 text-sm text-gray">{{ letter }}</h2>
           <div class="separator w-full border-b border-[#eeeeee]" />
           <div v-for="contact in sortContactsByAlphabet(contacts)[letter]" :key="contact.id">
             <div class="contact flex items-center gap-4 py-1">

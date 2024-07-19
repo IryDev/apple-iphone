@@ -9,9 +9,7 @@
           Cancel
         </button>
         <p class="font-semibold text-black">New contact</p>
-        <button disabled @click="createContact" class="flex items-center gap-2 text-blue">
-          Done
-        </button>
+        <button @click="createContact" class="flex items-center gap-2 text-blue">Done</button>
       </div>
 
       <div

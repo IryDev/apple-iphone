@@ -1,25 +1,23 @@
 <template>
-  <section class="common-padding h-full w-screen bg-zinc">
-    <div class="scrim-max-width">
-      <div class="max-w-[100vw]">
-        <div class="mb-8 flex flex-col justify-between lg:flex-row lg:items-center">
-          <h3 id="highlights" class="section-heading font-bold">Get the highlights.</h3>
+  <section class="h-full w-screen bg-zinc">
+    <div class="screen-max-width">
+      <div class="mb-8 flex flex-col justify-between px-10 pb-10 pt-60 lg:flex-row lg:items-center">
+        <h3 id="highlights" class="section-heading font-bold">Get the highlights.</h3>
 
-          <div class="flex flex-col gap-2 lg:flex-row lg:items-center lg:gap-5">
-            <p id="film" class="flex text-blue">
-              Watch the film
+        <div class="flex flex-col gap-2 lg:flex-row lg:items-center lg:gap-5">
+          <p id="film" class="flex text-blue">
+            Watch the film
 
-              <img class="ml-2" src="../assets/icons/watch.svg" alt="" />
-            </p>
-            <p id="event" class="flex items-center text-blue">
-              Watch the event
-              <img class="ml-2" src="../assets/icons/right.svg" alt="" />
-            </p>
-          </div>
+            <img class="ml-2" src="../assets/icons/watch.svg" alt="" />
+          </p>
+          <p id="event" class="flex items-center text-blue">
+            Watch the event
+            <img class="ml-2" src="../assets/icons/right.svg" alt="" />
+          </p>
         </div>
-
-        <VideoCarousel />
       </div>
+
+      <VideoCarousel />
     </div>
   </section>
 </template>

@@ -14,7 +14,7 @@
           </div>
 
           <div class="recents-infos flex items-center gap-2">
-            <p class="text-xs text-gray-400">{{ todayYesterday(log.date) }}</p>
+            <p class="text-xs text-gray-400">{{ todayYesterday(formatDate(log.date)) }}</p>
             <img width="20" height="20" src="../assets/icons/ios-info.svg" alt="" />
           </div>
         </div>
@@ -26,22 +26,26 @@
 
 <script setup lang="ts">
 import { useLogsStore } from '@/stores/logs'
+import dayjs from 'dayjs'
 
 const logsStore = useLogsStore()
 
 const logs = logsStore.logs
 
-const todayYesterday = (date: string) => {
-  const today = new Date().toLocaleDateString()
-  const yesterday = new Date(Date.now() - 86400000).toLocaleDateString()
+const formatDate = (date: string) => {
+  // return only date without time
+  return dayjs(date).format('MM/DD/YY')
+}
 
-  if (date === today) {
-    return 'Today'
-  } else if (date === yesterday) {
-    return 'Yesterday'
-  } else {
-    return date
-  }
+const todayYesterday = (date: string) => {
+  const today = dayjs().format('MM/DD/YY')
+  console.log(today, date)
+
+  return today === date
+    ? 'Today'
+    : dayjs().isSame(dayjs(today).subtract(1, 'day'), date)
+      ? 'Yesterday'
+      : date
 }
 
 logsStore.loadLogs()

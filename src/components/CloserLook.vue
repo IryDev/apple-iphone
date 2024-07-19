@@ -1,6 +1,6 @@
 <template>
   <section class="common-padding h-full">
-    <div class="scrim-max-width">
+    <div class="screen-max-width">
       <div class="mb-12 w-full lg:mb-24">
         <h2 id="closer" class="section-heading font-bold">Take a closer look.</h2>
       </div>
@@ -9,7 +9,7 @@
           class="gallery-image relative my-16 flex min-h-[450px] w-full items-center justify-center lg:my-20"
         >
           <img
-            class="img-active absolute h-[450px] object-contain opacity-0 transition-opacity duration-500 lg:w-2/3"
+            class="img-active absolute h-[300px] object-contain opacity-0 transition-opacity duration-500 lg:h-[450px] lg:w-2/3"
             v-for="(color, index) in colors"
             :class="{ 'opacity-100': selectedIndex === index }"
             :key="index"
