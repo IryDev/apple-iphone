@@ -41,11 +41,7 @@ const todayYesterday = (date: string) => {
   const today = dayjs().format('MM/DD/YY')
   console.log(today, date)
 
-  return today === date
-    ? 'Today'
-    : dayjs().isSame(dayjs(today).subtract(1, 'day'), date)
-      ? 'Yesterday'
-      : date
+  return today === date ? 'Today' : date
 }
 
 logsStore.loadLogs()

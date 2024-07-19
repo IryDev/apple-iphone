@@ -84,7 +84,7 @@ const props = defineProps<{
 }>()
 
 const data = reactive({
-  phone: props.phone,
+  phone: props.phone || '',
   name: '',
   lastName: '',
   createContactModal: props.createContactModal
