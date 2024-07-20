@@ -1,9 +1,8 @@
 <div align="center">
- <img src="https://github.com/IryDev/apple-iphone/assets/86270481/6e9fe0ba-2b16-41a9-b2c1-cdf7125d1b7e.png" alt="Project Banner" />
+ <img src="https://github.com/user-attachments/assets/9b8ab75a-6e05-43cb-bc9f-58e3a3ac7767" alt="Project Banner" />
 
   <div>
     <img src="https://img.shields.io/badge/Vue%20js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D" alt="vue.js" />
-    <img src="https://img.shields.io/badge/-Three_JS-black?style=for-the-badge&logoColor=white&logo=threedotjs&color=000000" alt="three.js" />
     <img src="https://img.shields.io/badge/-GSAP-black?style=for-the-badge&logoColor=white&logo=greensock&color=88CE02" alt="greensock" />
     <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="tailwindcss" />
   </div>
@@ -26,8 +25,6 @@ This is a clone of Apple's iPhone 15 Pro website using Vue.js and TailwindCSS. I
 ## <a name="tech-stack">⚙️ Tech Stack</a>
 
 - Vue.js
-- Three.js
-- Tres.js
 - GSAP (Greensock)
 - Vite
 - Tailwind CSS
@@ -36,15 +33,13 @@ This is a clone of Apple's iPhone 15 Pro website using Vue.js and TailwindCSS. I
 
 👉 **Beautiful Subtle Smooth Animations using GSAP**: Enhanced user experience with seamless and captivating animations powered by GSAP.
 
-👉 **Nice Model Switching Color in Mobile Devices**: A usefull switcher of color for a dynamic and interactive experience even in mobile devices
+👉 **Nice Model Switcher Color**: A useful switcher of color for a dynamic and interactive experience even on mobile devices
 
 👉 **iOS Phone Call Application**: A simulation of the IOS Phone App directly in the web browser
 
 👉 **Completely Responsive**: Consistent access and optimal viewing on any device with a fully responsive design that adapts to different screen sizes.
 
-👉 **Coming : 3D Model Rendering with Different Colors and Sizes**: Explore the iPhone 15 Pro from every angle with dynamic 3D rendering, offering various color and size options.
-
-👉 **Coming : Custom Video Carousel (made with GSAP)**: Engage users with a unique and interactive video carousel developed using GSAP for a personalized browsing experience.
+👉 **Custom Video Carousel (made with GSAP)**: Engage users with a unique and interactive video carousel developed using GSAP for a personalized browsing experience.
 
 ## <a name="quick-start">⚡ Quick Start</a>
 
